@@ -23,11 +23,11 @@ const config = require('./settings.json');
 
 function createBot () {
   const bot = mineflayer.createBot({
-      username: config['bot-account']['username'],
-      password: config['bot-account']['password'],
-      host: config.server.ip,
-      port: config.server.port,
-      version: config.server.version
+      username: process.env.BOT_USERNAME || config['bot-account']['username'],
+      password: process.env.BOT_PASSWORD || config['bot-account']['password'],
+      host: process.env.MC_SERVER || config.server.ip,
+      port: process.env.MC_PORT || config.server.port,
+      version: process.env.MC_VERSION || config.server.version
   })
 
   bot.loadPlugin(pathfinder)
