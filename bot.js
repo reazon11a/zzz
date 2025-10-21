@@ -10,11 +10,14 @@ try {
 }
 const pvp = require('mineflayer-pvp').plugin
 
-var http = require('http');  
-http.createServer(function (req, res) {   
-  res.write("I'm alive");   
-  res.end(); 
-}).listen(8080);
+var http = require('http');
+const KEEP_ALIVE_PORT = process.env.PORT || 8080;
+http.createServer(function (req, res) {
+  res.write("I'm alive");
+  res.end();
+}).listen(KEEP_ALIVE_PORT, () => {
+  console.log(`[KeepAlive] Listening on port ${KEEP_ALIVE_PORT}`);
+});
 
 const config = require('./settings.json');
 
