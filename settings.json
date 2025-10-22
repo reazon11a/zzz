@@ -35,7 +35,8 @@
             "repeat-delay": 10,
 
             "messages": [
-                "/kill Admin"
+                "hello im regular",
+                "whats up"
             ]
         },
 
