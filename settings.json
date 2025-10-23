@@ -6,7 +6,7 @@
     },
 
     "server":{
-        "ip": "103.180.237.198",
+        "ip": "sanishk.aternos.me",
         "port": 20382,
         "version": "1.17.1"
     },
